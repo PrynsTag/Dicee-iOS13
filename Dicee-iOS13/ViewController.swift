@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  Dicee-iOS13
 //
-//  Created by Angela Yu on 11/06/2019.
+//  Created by Prince Velasco on 05/09/2021.
 //  Copyright © 2019 London App Brewery. All rights reserved.
 //
 
@@ -18,13 +18,11 @@ class ViewController: UIViewController {
     
 
     @IBAction func rollButtonPressed(_ sender: UIButton) {
-        let imageArr = ["DiceOne", "DiceTwo", "DiceThree", "DiceFour", "DiceFive", "DiceSix"]
-        
+        let imageArr = [#imageLiteral(resourceName: "DiceOne"), #imageLiteral(resourceName: "DiceTwo"), #imageLiteral(resourceName: "DiceThree"), #imageLiteral(resourceName: "DiceFour"), #imageLiteral(resourceName: "DiceFive"), #imageLiteral(resourceName: "DiceSix")]
         let RandomNumber = Int(arc4random_uniform(UInt32(imageArr.count)))
-        let image = UIImage.init(named: "\(imageArr[RandomNumber])")
         
-        diceImageViewOne.image = image
-        diceImageViewTwo.image = image
+        diceImageViewOne.image = imageArr[RandomNumber]
+        diceImageViewTwo.image = imageArr[RandomNumber]
     }
     
 }
